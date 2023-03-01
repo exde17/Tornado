@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Outlet, Link } from "react-router-dom";
 import { 
     RiDashboardLine,
     RiBarChartHorizontalLine,
@@ -14,36 +15,36 @@ const Sidebar = () => {
       }
   return (
     <>
-    <div className={`fixed lg:static w-[70%] md:w-[50%] lg:w-full top-0 z-50 bg-white transtion-all ${ sidebar ? "-left-0" :  "-left-full" }
+    <div className={`fixed lg:static w-[64%] md:w-[50%] lg:w-full top-0 z-50 bg-white transtion-all ${ sidebar ? "-left-0" :  "-left-full" }
     w-full h-full hoverflow-y-scroll col-span-1 p-8 border-r`}>
        {/* logo */}
-       <div className='text-center p-8'>
+       <div className='text-center p-8 rounded-full bg-gray-400'>
             <h1 className='uppercase font-bold tracking-[4px]'>logo</h1>
        </div>
-       <div className="flex flex-col justify-between h-[600px]">
+       <div className="flex flex-col justify-between my-14 h-[600px]">
          {/* menu */}
          <nav>
            <ul>
              <li>
-               <a href='h' className='flex items-center gap-2 hover:bg-purple-600 text-gray-400 p-4 hover:text-white rounded-lg transition-colors font-semibold'>
+               <Link to={"/Lideres"} className='flex items-center gap-2 h-4 hover:bg-purple-600 text-gray-400 p-4 hover:text-white rounded-lg transition-colors font-semibold'>
                  <RiDashboardLine/>
-                 Dashboard
-               </a>
+                 Lideres
+               </Link>
              </li>
              <li>
-               <a href='h' className='flex items-center gap-2 hover:bg-purple-600 text-gray-400 p-4 hover:text-white rounded-lg transition-colors font-semibold'>
+               <Link to={"/Segidores"} className='flex items-center gap-2 h-4 hover:bg-purple-600 text-gray-400 p-4 hover:text-white rounded-lg transition-colors font-semibold'>
                  <RiDashboardLine/>
-                 Ejemplo1
-               </a>
+                 Seguidores
+               </Link>
              </li>
              <li>
-               <a href='h' className='flex items-center gap-2 hover:bg-purple-600 text-gray-400 p-4 hover:text-white rounded-lg transition-colors font-semibold'>
+               <a href='h' className='flex items-center gap-2 hover:bg-purple-600 h-4 text-gray-400 p-4 hover:text-white rounded-lg transition-colors font-semibold'>
                  <RiDashboardLine/>
                  Ejemplo2
                </a>
              </li>
              <li>
-               <a href='h' className='flex items-center gap-2 hover:bg-purple-600 text-gray-400 p-4 hover:text-white rounded-lg transition-colors font-semibold'>
+               <a href='h' className='flex items-center gap-2 h-4 hover:bg-purple-600 text-gray-400 p-4 hover:text-white rounded-lg transition-colors font-semibold'>
                  <RiDashboardLine/>
                  Ejemplo3
                </a>
@@ -68,7 +69,9 @@ const Sidebar = () => {
    {sidebar ?< RiCloseLine/>:<RiBarChartHorizontalLine/> }
    
  </button>
+ {/* <Outlet/> */}
  </>
+ 
   )
 }
 
