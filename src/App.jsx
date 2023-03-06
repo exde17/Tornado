@@ -24,7 +24,7 @@ function App() {
         {/* header */}
         
         {/* inicio del esteespacio donde va todo el contenido */}
-        <div className="p-12 bg-gray-100">
+        {/* <div className="p-12 bg-gray-100"> */}
           <Routes>
           
             <Route path="/" element={<Login />} />
@@ -33,7 +33,7 @@ function App() {
             <Route path="/Registro" element={<Registro/>}/>
             
           </Routes>
-          </div>
+          {/* </div> */}
           </div>
         </BrowserRouter>
         {/* <div className="p-12 bg-gray-100">
