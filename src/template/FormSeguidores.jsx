@@ -10,7 +10,7 @@ const FormSeguidores = () => {
     { id: 'strawberry', nombre: 'Strawberry' },
     { id: 'vanilla', nombre: 'Vanilla' }
   ]
-  const [valorSelect, setvalorSelect] = useState(null)
+  const [valorSelect, setvalorSelect] = useState([])
 
   useEffect(()=>{
     console.log('bloc')
